@@ -1,0 +1,10 @@
+name: CrescentMoon
+version: '${project.version}'
+main: com.jack.crescentmoon.Main
+api-version: 1.16
+authors: [ Jack ]
+description: Main project for CrescentMoon.
+commands:
+  givewand:
+    description: Gives the custom wand to the player.
+    usage: /<command>
