@@ -8,3 +8,6 @@ commands:
   givewand:
     description: Gives the custom wand to the player.
     usage: /<command>
+  giveenma:
+    description: Gives the custom enma sword to the player.
+    usage: /<command>

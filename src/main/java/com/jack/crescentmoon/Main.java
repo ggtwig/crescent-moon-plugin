@@ -11,8 +11,11 @@ public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         ItemManager.init();
+
         Bukkit.getPluginManager().registerEvents(new ItemEvents(), this);
+
         getCommand("givewand").setExecutor(new ItemCommands());
+        getCommand("giveenma").setExecutor(new ItemCommands());
     }
 
     @Override

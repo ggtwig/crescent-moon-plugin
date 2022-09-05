@@ -11,6 +11,7 @@ public class ItemEvents implements Listener {
 
     @EventHandler
     public static void onRightClick(PlayerInteractEvent e) {
+
         if (e.getAction() == Action.RIGHT_CLICK_BLOCK) {
             if (e.getItem() != null) {
                 if (e.getItem().getItemMeta().equals(ItemManager.wand.getItemMeta())) {
@@ -21,4 +22,5 @@ public class ItemEvents implements Listener {
             }
         }
     }
+
 }
