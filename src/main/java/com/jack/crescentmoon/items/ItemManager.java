@@ -42,12 +42,12 @@ public class ItemManager {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("§8Enma");
         List<String> lore = new ArrayList<>();
-        lore.add("§7Enma is one of the 21 Great Grade swords ");
-        lore.add("§7crafted by Shimotsuki Kozaburo in the Wano Country");
+        lore.add("§7Enma is one of the 21 Great Grade swords crafted ");
+        lore.add("§7by Shimotsuki Kozaburo in the Wano Country");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.DAMAGE_ALL, 10, true);
         meta.addEnchant(Enchantment.DURABILITY, 10, true);
-        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        //meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
         enma = item;
     }
