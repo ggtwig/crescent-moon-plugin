@@ -21,6 +21,8 @@ public class ItemCommands implements CommandExecutor {
             player.getInventory().addItem(ItemManager.wand);
         } else if (command.getName().equals("giveenma") && sender.hasPermission("crescentmoon.enma")) {
             player.getInventory().addItem(ItemManager.enma);
+        } else if (command.getName().equals("givenichirin")) {
+            player.getInventory().addItem(ItemManager.nichirin);
         }
 
         return true;

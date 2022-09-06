@@ -7,9 +7,15 @@ description: Main project for CrescentMoon.
 commands:
   givewand:
     description: Gives the custom wand to the player.
+    aliases: wand
     usage: /<command>
   giveenma:
     description: Gives the custom enma sword to the player.
+    aliases: enma
     permission: crescentmoon.enma
     permission-message: §cYou do not have permission to use this!
+    usage: /<command>
+  givenichirin:
+    description: Gives custom nichirin sword to the player.
+    aliases: nichirin
     usage: /<command>

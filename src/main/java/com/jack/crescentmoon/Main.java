@@ -16,6 +16,7 @@ public final class Main extends JavaPlugin {
 
         getCommand("givewand").setExecutor(new ItemCommands());
         getCommand("giveenma").setExecutor(new ItemCommands());
+        getCommand("givenichirin").setExecutor(new ItemCommands());
     }
 
     @Override

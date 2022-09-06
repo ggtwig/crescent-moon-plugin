@@ -16,9 +16,12 @@ public class ItemManager {
     public static ItemStack wand;
     public static ItemStack enma;
 
+    public static ItemStack nichirin;
+
     public static void init() {
         createWand();
         createEnma();
+        createNichirin();
     }
 
     private static void createWand() {
@@ -52,5 +55,14 @@ public class ItemManager {
         //meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         item.setItemMeta(meta);
         enma = item;
+    }
+
+    private static void createNichirin() {
+        nichirin = new ItemBuilder(Material.DIAMOND_SWORD, 1)
+                .setDisplayName("§8Nichirin Sword")
+                .setLore(
+                        "§7This Nichirin Katana is ",
+                        "§7the greatest katana!")
+                .addEnchant(Enchantment.DAMAGE_ALL, 10, true).build();
     }
 }
