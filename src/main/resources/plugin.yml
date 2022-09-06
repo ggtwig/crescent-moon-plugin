@@ -10,4 +10,6 @@ commands:
     usage: /<command>
   giveenma:
     description: Gives the custom enma sword to the player.
+    permission: crescentmoon.enma
+    permission-message: §cYou do not have permission to use this!
     usage: /<command>

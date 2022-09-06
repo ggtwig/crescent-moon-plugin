@@ -14,10 +14,12 @@ public class ItemCommands implements CommandExecutor {
             sender.sendMessage("Only players can use that command!");
             return true;
         }
+
         Player player = (Player) sender;
+
         if (command.getName().equals("givewand")) {
             player.getInventory().addItem(ItemManager.wand);
-        } else if (command.getName().equals("giveenma")) {
+        } else if (command.getName().equals("giveenma") && sender.hasPermission("crescentmoon.enma")) {
             player.getInventory().addItem(ItemManager.enma);
         }
 
