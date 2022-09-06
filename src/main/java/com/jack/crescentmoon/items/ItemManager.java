@@ -31,8 +31,9 @@ public class ItemManager {
         lore.add("§7Minecraft's ancient history!");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.LUCK, 1, true);
-        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE, modifier);
+        meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+        meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         item.setItemMeta(meta);
         wand = item;
     }
@@ -42,6 +43,7 @@ public class ItemManager {
         ItemMeta meta = item.getItemMeta();
         meta.setDisplayName("§8Enma");
         List<String> lore = new ArrayList<>();
+        lore.add(" ");
         lore.add("§7Enma is one of the 21 Great Grade swords crafted ");
         lore.add("§7by Shimotsuki Kozaburo in the Wano Country");
         meta.setLore(lore);
