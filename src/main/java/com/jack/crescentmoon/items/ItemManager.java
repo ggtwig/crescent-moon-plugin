@@ -63,6 +63,7 @@ public class ItemManager {
                 .setLore(
                         "§7This Nichirin Katana is ",
                         "§7the greatest katana!")
-                .addEnchant(Enchantment.DAMAGE_ALL, 10, true).build();
+                .addEnchant(Enchantment.DAMAGE_ALL, 20, true)
+                .addItemFlag(ItemFlag.HIDE_ENCHANTS).build();
     }
 }
