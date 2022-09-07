@@ -1,15 +1,11 @@
 package com.jack.crescentmoon.events;
 
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
 
-import java.util.Random;
-
-public class MenuListener implements Listener {
+public class MenuEvents implements Listener {
 
     @EventHandler
     public void onClick(InventoryClickEvent e) {
