@@ -1,6 +1,8 @@
 package com.jack.crescentmoon.items;
 
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -12,6 +14,7 @@ public class ItemBuilder {
 
     private ItemStack itemStack;
     private ItemMeta itemMeta;
+    private AttributeModifier modifier;
 
     public ItemBuilder(Material material, int amount) {
         this.itemStack = new ItemStack(material, amount);
@@ -42,6 +45,11 @@ public class ItemBuilder {
         return this;
     }
 
+    public ItemBuilder addAttributeModifier(String name, int amount, AttributeModifier.Operation operation, Attribute attribute) {
+        this.modifier = new AttributeModifier(name, amount, operation);
+        this.itemMeta.addAttributeModifier(attribute, modifier);
+        return this;
+    }
 
 
     public ItemStack build() {
