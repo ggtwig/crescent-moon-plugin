@@ -5,6 +5,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 public class ItemCommands implements CommandExecutor {
     @Override
@@ -19,8 +20,10 @@ public class ItemCommands implements CommandExecutor {
 
         if (command.getName().equals("givewand")) {
             player.getInventory().addItem(ItemManager.wand);
-        } else if (command.getName().equals("giveenma") && sender.hasPermission("crescentmoon.enma")) {
-            player.getInventory().addItem(ItemManager.enma);
+        } else if (command.getName().equals("givezoro") && sender.hasPermission("crescentmoon.zoroset")) {
+            for (ItemStack i : ItemManager.zoroSet.values()) {
+                player.getInventory().addItem(i);
+            }
         } else if (command.getName().equals("givenichirin")) {
             player.getInventory().addItem(ItemManager.nichirin);
         }
