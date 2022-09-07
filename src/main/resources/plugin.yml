@@ -9,10 +9,10 @@ commands:
     description: Gives the custom wand to the player.
     aliases: wand
     usage: /<command>
-  giveenma:
-    description: Gives the custom enma sword to the player.
-    aliases: enma
-    permission: crescentmoon.enma
+  givezoro:
+    description: Gives the custom zoro set to the player.
+    aliases: zoro
+    permission: crescentmoon.zoro
     permission-message: §cYou do not have permission to use this!
     usage: /<command>
   givenichirin:
