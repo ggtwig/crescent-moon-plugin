@@ -12,7 +12,7 @@ commands:
   givezoro:
     description: Gives the custom zoro set to the player.
     aliases: zoro
-    permission: crescentmoon.zoro
+    permission: crescentmoon.zoroset
     permission-message: §cYou do not have permission to use this!
     usage: /<command>
   givenichirin:
