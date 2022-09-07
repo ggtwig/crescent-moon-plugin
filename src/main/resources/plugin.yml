@@ -5,6 +5,7 @@ api-version: 1.16
 authors: [ Jack ]
 description: Main project for CrescentMoon.
 commands:
+
   givewand:
     description: Gives the custom wand to the player.
     aliases: wand
@@ -18,4 +19,8 @@ commands:
   givenichirin:
     description: Gives custom nichirin sword to the player.
     aliases: nichirin
+    usage: /<command>
+
+  menu:
+    description: Opens up the main menu gui.
     usage: /<command>
