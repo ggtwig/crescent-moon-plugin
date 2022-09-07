@@ -56,6 +56,7 @@ public class ItemManager {
         nichirin = new ItemBuilder(Material.DIAMOND_SWORD, 1)
                 .setDisplayName("§8Nichirin Sword")
                 .setLore(
+                        " ",
                         "§7This Nichirin Katana is ",
                         "§7the greatest katana!")
                 .addEnchant(Enchantment.DAMAGE_ALL, 20, true)
