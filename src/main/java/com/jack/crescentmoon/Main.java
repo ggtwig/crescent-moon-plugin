@@ -15,7 +15,7 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new ItemEvents(), this);
 
         getCommand("givewand").setExecutor(new ItemCommands());
-        getCommand("giveenma").setExecutor(new ItemCommands());
+        getCommand("givezoro").setExecutor(new ItemCommands());
         getCommand("givenichirin").setExecutor(new ItemCommands());
     }
 
