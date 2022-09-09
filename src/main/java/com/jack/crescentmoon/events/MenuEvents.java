@@ -24,7 +24,8 @@ public class MenuEvents implements Listener {
                     MenuManager.openKitsMenu(player);
                     break;
                 case 22: // random teleport
-
+                    player.closeInventory();
+                    player.performCommand("rtp");
                     break;
                 case 24: // block shuffle
                     player.closeInventory();
