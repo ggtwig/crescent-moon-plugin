@@ -13,7 +13,8 @@ import java.util.Arrays;
 public class MenuManager {
 
     public static void openMainMenu(Player player) {
-        Inventory mainMenu = Bukkit.createInventory(player, 54, "§4Main Menu!");
+
+        Inventory mainMenu = Bukkit.createInventory(player, 54, "§4Main Menu");
 
         // NETHERITE SWORD --- KITS
         ItemStack menuKits = new ItemStack(Material.NETHERITE_SWORD);
@@ -76,5 +77,30 @@ public class MenuManager {
 
 
         player.openInventory(mainMenu);
+    }
+
+    public static void openKitsMenu(Player player) {
+
+        Inventory kitsMenu = Bukkit.createInventory(player, 9, "§4Kits");
+
+        // NETHERITE SWORD --- KIT ZORO
+        ItemStack kitsZoro = new ItemStack(Material.NETHERITE_SWORD);
+        ItemMeta kitsZoroMeta = kitsZoro.getItemMeta();
+        kitsZoroMeta.setDisplayName("§3Zoro Kit");
+        kitsZoroMeta.setLore(Arrays.asList("§7Gain Zoro's iconic items!"));
+        kitsZoro.setItemMeta(kitsZoroMeta);
+
+
+        // BARRIER --- BACK BUTTON
+        ItemStack kitsBack = new ItemStack(Material.BARRIER);
+        ItemMeta kitsBackMeta = kitsBack.getItemMeta();
+        kitsBackMeta.setDisplayName("§cGo Back!");
+        kitsBack.setItemMeta(kitsBackMeta);
+
+        kitsMenu.setItem(8, kitsBack);
+
+        kitsMenu.setItem(0, kitsZoro);
+
+        player.openInventory(kitsMenu);
     }
 }
