@@ -17,6 +17,7 @@ public class MenuEvents implements Listener {
 
             switch (e.getRawSlot()) {
                 case 0: // close
+                    player.closeInventory();
                     break;
                 case 20: // kits
                     player.closeInventory();
@@ -26,6 +27,7 @@ public class MenuEvents implements Listener {
 
                     break;
                 case 24: // block shuffle
+                    player.closeInventory();
                     player.performCommand("shuffle");
                     break;
                 case 30: // kill yourself
@@ -37,22 +39,22 @@ public class MenuEvents implements Listener {
                     player.getInventory().clear();
                     player.sendMessage("§cYou cleared your inventory!");
                     break;
-                default:
-                    return;
             }
-            player.closeInventory();
         } else if (e.getView().getTitle().equals("§4Kits") && e.getCurrentItem() != null) {
             e.setCancelled(true);
 
             switch (e.getRawSlot()) {
                 case 0: // kit zoro
+                    player.closeInventory();
                     player.performCommand("givezoro");
+                    player.sendMessage("§aSuccessfully claimed Zoro Kit!");
                     break;
 
-                case 8: // close
+                case 8: // go back
+                    player.closeInventory();
+                    MenuManager.openMainMenu(player);
                     break;
             }
-            player.closeInventory();
         }
     }
 
