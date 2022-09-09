@@ -1,0 +1,2 @@
+worldBorder: true #True to limit players teleport range, false for default 25k range
+border: 200 #range of players random teleport
