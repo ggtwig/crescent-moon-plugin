@@ -88,6 +88,7 @@ public class MenuManager {
         ItemMeta kitsZoroMeta = kitsZoro.getItemMeta();
         kitsZoroMeta.setDisplayName("§3Zoro Kit");
         kitsZoroMeta.setLore(Arrays.asList("§7Gain Zoro's iconic items!"));
+        kitsZoroMeta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         kitsZoro.setItemMeta(kitsZoroMeta);
 
 
