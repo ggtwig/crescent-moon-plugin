@@ -24,3 +24,8 @@ commands:
   menu:
     description: Opens up the main menu gui.
     usage: /<command>
+
+  randomtp:
+    description: Randomly teleports the player to a random location on the map
+    aliases: rtp
+    usage: /<command>
