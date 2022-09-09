@@ -47,7 +47,6 @@ public class MenuEvents implements Listener {
                 case 0: // kit zoro
                     player.closeInventory();
                     player.performCommand("givezoro");
-                    player.sendMessage("§aSuccessfully claimed Zoro Kit!");
                     break;
 
                 case 8: // go back
