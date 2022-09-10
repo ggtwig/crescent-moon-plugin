@@ -17,16 +17,12 @@ public final class Main extends JavaPlugin {
         getConfig().options().copyDefaults();
         saveDefaultConfig();
 
+        registerCommands();
+
         ItemManager.init();
 
         Bukkit.getPluginManager().registerEvents(new ItemEvents(), this);
         Bukkit.getPluginManager().registerEvents(new MenuEvents(), this);
-
-        getCommand("givewand").setExecutor(new ItemCommands());
-        getCommand("givezoro").setExecutor(new ItemCommands());
-        getCommand("givenichirin").setExecutor(new ItemCommands());
-        getCommand("menu").setExecutor(new MenuCommands());
-        getCommand("randomtp").setExecutor(new RTPCommands());
 
         RTPUtils rtpUtils = new RTPUtils(this);
     }
@@ -34,5 +30,13 @@ public final class Main extends JavaPlugin {
     @Override
     public void onDisable() {
 
+    }
+
+    private void registerCommands() {
+        getCommand("givewand").setExecutor(new ItemCommands());
+        getCommand("givezoro").setExecutor(new ItemCommands());
+        getCommand("givenichirin").setExecutor(new ItemCommands());
+        getCommand("menu").setExecutor(new MenuCommands());
+        getCommand("randomtp").setExecutor(new RTPCommands());
     }
 }
