@@ -3,6 +3,7 @@ package com.jack.crescentmoon.commands;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.jack.crescentmoon.items.ItemManager;
+import com.jack.crescentmoon.utils.ChatUtils;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -20,7 +21,7 @@ public class ItemCommands implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (!(sender instanceof Player)) {
-            sender.sendMessage("Only players can use that command!");
+            ChatUtils.notPlayerError(sender);
             return true;
         }
 
@@ -32,7 +33,8 @@ public class ItemCommands implements CommandExecutor {
             for (ItemStack i : ItemManager.zoroSet.values()) {
                 player.getInventory().addItem(i);
             }
-            player.sendMessage("§aSuccessfully claimed Zoro Kit!");
+            //player.sendMessage("§aSuccessfully claimed Zoro Kit!");
+            ChatUtils.sendSuccess(sender, "Successfully claimed Zoro Kit!");
             zoroCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 5000);
         } else if (command.getName().equals("givenichirin")) {
             player.getInventory().addItem(ItemManager.nichirin);
