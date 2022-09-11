@@ -12,7 +12,7 @@ public class MenuCommands implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            ChatUtils.notPlayerError(sender);
+            ChatUtils.notPlayerErrorMessage(sender);
             return true;
         }
 

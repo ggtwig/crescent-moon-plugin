@@ -21,7 +21,7 @@ public class ItemCommands implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
         if (!(sender instanceof Player)) {
-            ChatUtils.notPlayerError(sender);
+            ChatUtils.notPlayerErrorMessage(sender);
             return true;
         }
 
@@ -34,7 +34,7 @@ public class ItemCommands implements CommandExecutor {
                 player.getInventory().addItem(i);
             }
             //player.sendMessage("§aSuccessfully claimed Zoro Kit!");
-            ChatUtils.sendSuccess(sender, "Successfully claimed Zoro Kit!");
+            ChatUtils.sendSuccessMessage(sender, "Successfully claimed Zoro Kit!");
             zoroCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 5000);
         } else if (command.getName().equals("givenichirin")) {
             player.getInventory().addItem(ItemManager.nichirin);
