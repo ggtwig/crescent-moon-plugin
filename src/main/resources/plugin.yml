@@ -16,9 +16,9 @@ commands:
     permission: crescentmoon.zoroset
     permission-message: §cYou do not have permission to use this!
     usage: /<command>
-  givenichirin:
-    description: Gives custom nichirin sword to the player.
-    aliases: nichirin
+  givedemonslayer:
+    description: Gives custom demon slayer set to the player.
+    aliases: [nichirin, giveds, ds]
     usage: /<command>
 
   menu:
