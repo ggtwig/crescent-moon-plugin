@@ -21,7 +21,7 @@ public class ItemEvents implements Listener {
                 if (e.getItem().getItemMeta().equals(ItemManager.wand.getItemMeta())) {
                     player.getWorld().createExplosion(player.getLocation(), 2.0f);
                     player.sendMessage("§6You dare use the Stick of Truth?!");
-                } else if (e.getItem().getItemMeta().equals(ItemManager.nichirin.getItemMeta())) {
+                } else if (e.getItem().getItemMeta().equals(ItemManager.demonSlayerSet.get("demonSlayerSword").getItemMeta())) {
                     player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 200, 10));
                 }
             }
