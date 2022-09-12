@@ -33,11 +33,13 @@ public class ItemCommands implements CommandExecutor {
             for (ItemStack i : ItemManager.zoroSet.values()) {
                 player.getInventory().addItem(i);
             }
-            //player.sendMessage("§aSuccessfully claimed Zoro Kit!");
             ChatUtils.sendSuccessMessage(sender, "Successfully claimed Zoro Kit!");
             zoroCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 5000);
-        } else if (command.getName().equals("givenichirin")) {
-            player.getInventory().addItem(ItemManager.nichirin);
+        } else if (command.getName().equals("givedemonslayer")) {
+            for (ItemStack i : ItemManager.demonSlayerSet.values()) {
+                player.getInventory().addItem(i);
+            }
+            ChatUtils.sendSuccessMessage(sender, "Successfully claimed Demon Slayer Kit!");
         } else if (zoroCooldown.asMap().containsKey(player.getUniqueId())){
             long cooldownLeft = zoroCooldown.asMap().get(player.getUniqueId()) - System.currentTimeMillis();
             player.sendMessage("§cYou must wait " + TimeUnit.MILLISECONDS.toSeconds(cooldownLeft) + " seconds to use this again!");

@@ -35,7 +35,7 @@ public final class Main extends JavaPlugin {
     private void registerCommands() {
         getCommand("givewand").setExecutor(new ItemCommands());
         getCommand("givezoro").setExecutor(new ItemCommands());
-        getCommand("givenichirin").setExecutor(new ItemCommands());
+        getCommand("givedemonslayer").setExecutor(new ItemCommands());
         getCommand("menu").setExecutor(new MenuCommands());
         getCommand("randomtp").setExecutor(new RTPCommands());
     }

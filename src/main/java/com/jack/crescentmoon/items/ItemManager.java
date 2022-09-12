@@ -12,13 +12,13 @@ import java.util.HashMap;
 public class ItemManager {
 
     public static ItemStack wand;
-    public static ItemStack nichirin;
+    public static HashMap<String, ItemStack> demonSlayerSet = new HashMap<>();
     public static HashMap<String, ItemStack> zoroSet = new HashMap<>();
 
     public static void init() {
         createWand();
         createZoroSet();
-        createNichirin();
+        createDemonSlayerSet();
     }
 
     private static void createWand() {
@@ -52,8 +52,8 @@ public class ItemManager {
         zoroSet.put("zoroChestplate", zoroChestplate);
     }
 
-    private static void createNichirin() {
-        nichirin = new ItemBuilder(Material.DIAMOND_SWORD, 1)
+    private static void createDemonSlayerSet() {
+        ItemStack demonSlayerSword = new ItemBuilder(Material.DIAMOND_SWORD, 1)
                 .setDisplayName("§8Nichirin Sword")
                 .setLore(
                         " ",
@@ -61,5 +61,7 @@ public class ItemManager {
                         "§7the greatest katana!")
                 .addEnchant(Enchantment.DAMAGE_ALL, 20, true)
                 .addItemFlag(ItemFlag.HIDE_ENCHANTS).build();
+
+        demonSlayerSet.put("demonSlayerSword", demonSlayerSword);
     }
 }
