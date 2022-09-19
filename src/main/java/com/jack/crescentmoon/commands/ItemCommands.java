@@ -45,6 +45,9 @@ public class ItemCommands implements CommandExecutor {
         } else if (zoroCooldown.asMap().containsKey(player.getUniqueId())){
             long cooldownLeft = zoroCooldown.asMap().get(player.getUniqueId()) - System.currentTimeMillis();
             player.sendMessage("§cYou must wait " + TimeUnit.MILLISECONDS.toSeconds(cooldownLeft) + " seconds to use this again!");
+        } else if (dsCooldown.asMap().containsKey(player.getUniqueId())) {
+            long cooldownLeft = dsCooldown.asMap().get(player.getUniqueId()) - System.currentTimeMillis();
+            player.sendMessage("§cYou must wait " + TimeUnit.MILLISECONDS.toSeconds(cooldownLeft) + " seconds to use this again!");
         }
 
         return true;
