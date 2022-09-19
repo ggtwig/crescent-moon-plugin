@@ -34,6 +34,7 @@ public final class Main extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("givewand").setExecutor(new ItemCommands());
+        getCommand("givepick").setExecutor(new ItemCommands());
         getCommand("givezoro").setExecutor(new ItemCommands());
         getCommand("givedemonslayer").setExecutor(new ItemCommands());
         getCommand("menu").setExecutor(new MenuCommands());

@@ -10,6 +10,10 @@ commands:
     description: Gives the custom wand to the player.
     aliases: wand
     usage: /<command>
+  givepick:
+    description: Gives the custom pickaxe to the player.
+    aliases: pick
+    usage: /<command>
   givezoro:
     description: Gives the custom zoro set to the player.
     aliases: zoro

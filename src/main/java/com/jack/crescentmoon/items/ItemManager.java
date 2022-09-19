@@ -12,11 +12,14 @@ import java.util.HashMap;
 public class ItemManager {
 
     public static ItemStack wand;
+
+    public static ItemStack pick;
     public static HashMap<String, ItemStack> demonSlayerSet = new HashMap<>();
     public static HashMap<String, ItemStack> zoroSet = new HashMap<>();
 
     public static void init() {
         createWand();
+        createPick();
         createZoroSet();
         createDemonSlayerSet();
     }
@@ -32,6 +35,19 @@ public class ItemManager {
                 .addAttributeModifier("generic.attack_damage", 100, AttributeModifier.Operation.ADD_NUMBER, Attribute.GENERIC_ATTACK_DAMAGE)
                 .addItemFlag(ItemFlag.HIDE_ENCHANTS)
                 .addItemFlag(ItemFlag.HIDE_ATTRIBUTES).build();
+    }
+
+    private static void createPick() {
+        pick = new ItemBuilder(Material.NETHERITE_PICKAXE, 1)
+                .setDisplayName("§5Ace")
+                .setLore(
+                        " ",
+                        "§7Powerful Pickaxe capable of massive ",
+                        "§7excavation missions!")
+                .addEnchant(Enchantment.DURABILITY, 20, true)
+                .addEnchant(Enchantment.DIG_SPEED, 20, true)
+                .addEnchant(Enchantment.SILK_TOUCH, 1, true)
+                .addItemFlag(ItemFlag.HIDE_ENCHANTS).build();
     }
 
     private static void createZoroSet() {

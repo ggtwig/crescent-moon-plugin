@@ -30,6 +30,8 @@ public class ItemCommands implements CommandExecutor {
 
         if (command.getName().equals("givewand")) {
             player.getInventory().addItem(ItemManager.wand);
+        } else if (command.getName().equals("givepick")) {
+            player.getInventory().addItem(ItemManager.pick);
         } else if (command.getName().equals("givezoro") && sender.hasPermission("crescentmoon.zoroset") && (!zoroCooldown.asMap().containsKey(player.getUniqueId()))) {
             for (ItemStack i : ItemManager.zoroSet.values()) {
                 player.getInventory().addItem(i);
