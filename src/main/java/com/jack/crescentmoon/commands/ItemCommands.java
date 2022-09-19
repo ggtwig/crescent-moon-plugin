@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 public class ItemCommands implements CommandExecutor {
 
     private Cache<UUID, Long> zoroCooldown = CacheBuilder.newBuilder().expireAfterWrite(10, TimeUnit.SECONDS).build();
+    private Cache<UUID, Long> dsCooldown = CacheBuilder.newBuilder().expireAfterWrite(10, TimeUnit.SECONDS).build();
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -34,12 +35,13 @@ public class ItemCommands implements CommandExecutor {
                 player.getInventory().addItem(i);
             }
             ChatUtils.sendSuccessMessage(sender, "Successfully claimed Zoro Kit!");
-            zoroCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 5000);
-        } else if (command.getName().equals("givedemonslayer")) {
+            zoroCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 10000);
+        } else if (command.getName().equals("givedemonslayer") && (!dsCooldown.asMap().containsKey(player.getUniqueId()))) {
             for (ItemStack i : ItemManager.demonSlayerSet.values()) {
                 player.getInventory().addItem(i);
             }
             ChatUtils.sendSuccessMessage(sender, "Successfully claimed Demon Slayer Kit!");
+            dsCooldown.put(player.getUniqueId(), System.currentTimeMillis() + 10000);
         } else if (zoroCooldown.asMap().containsKey(player.getUniqueId())){
             long cooldownLeft = zoroCooldown.asMap().get(player.getUniqueId()) - System.currentTimeMillis();
             player.sendMessage("§cYou must wait " + TimeUnit.MILLISECONDS.toSeconds(cooldownLeft) + " seconds to use this again!");
